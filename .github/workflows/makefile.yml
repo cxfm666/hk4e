@@ -18,7 +18,10 @@ jobs:
       uses: zchee/setup-protoc@v1.2.0
       with:
         version: 21.8
-       
+        
+    - name: 配置 proto gen go环境
+      run: go get github.com/golang/protobuf/protoc-gen-go
+      
     - name: 生成natsrpc协议
       run: make gen_natsrpc
 
