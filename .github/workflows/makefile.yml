@@ -22,9 +22,6 @@ jobs:
     - name: 配置 proto gen go环境
       run: go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
       
-    - name: 生成natsrpc协议
-      run: make gen_natsrpc
-
     - name: 生成客户端协议
       run: make gen_proto
 
